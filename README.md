@@ -9,7 +9,7 @@ Currently only 8 lights, since that's all I need this Christmas.
 * Deploy to your RPi
 
 eg: ./GeneratePattern.py --bpm 136.88 --duration 227.45 --start 1.25 > LetItGo.pattern
-    (Edit LetItGo.pattern)
+    (Edit LetItGo.pattern, based on time signatures for interesting events in Audacity)
     ./LightPlayer.py --music LetItGo.mp3 --pattern LetItGo.pattern
 
     (Adjust GPIO pins in LightPlayer.py according to your setup)
