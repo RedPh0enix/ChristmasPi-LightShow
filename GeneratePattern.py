@@ -1,4 +1,7 @@
 #!/usr/bin/python
+#
+# Generate BPM figures in audacity by generating a click track, and gradually
+# refining against the raw mp3.
 
 import time
 import argparse
@@ -30,7 +33,8 @@ if(args.start):
 	StartTime=float(args.start)
 
 if(StartTime > 0):
-	print "0m 00.000s	0	0	0	0	0	0	0	0"
+	#print "0m 00.000s	0	0	0	0	0	0	0	0"
+	print "0m 00.000s	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0"
 
 t=StartTime;
 counter=0
@@ -38,6 +42,7 @@ while(t <= Duration):
 	m=int(t/60.0)
 	s=t-(m*60.0)
 	print "%dm %06.3fs	-	-	-	-	-	-	-	-" % (m,s),
+	# print "%dm %06.3fs	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-" % (m,s),
 	if((counter %16)==0):
 		print "\t#"
 	elif((counter%4)==0):
